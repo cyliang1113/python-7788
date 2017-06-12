@@ -17,6 +17,12 @@ print "================================="
 print type(str2.decode('utf-8'))
 print len(str2.decode('utf-8'))
 
+print "================================="
+
+dir([])
+
+
+
 
 
 
