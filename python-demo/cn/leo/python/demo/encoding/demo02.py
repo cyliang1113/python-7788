@@ -19,7 +19,11 @@ print len(str2.decode('utf-8'))
 
 print "================================="
 
-dir([])
+h = '''i
+love
+you
+'''
+print h
 
 
 
