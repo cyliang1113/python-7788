@@ -7,16 +7,19 @@ def myAbs(x):
         return -x
     
     
-print myAbs(-5)
-print myAbs("-qq")
+# print myAbs(-5)
+# print myAbs("-qq")
 
 
 def swith(x, y):
     return y, x;
 
 
-print swith(1, 2)
+# print swith(1, 2)
 
+
+
+# 函数有默认参数
 def power(x, n=2):
     s = 1
     while n:
@@ -24,5 +27,20 @@ def power(x, n=2):
         s = s * x
     return s
 
-print power(3, 3)
-print power(3)
+# print power(3, 3)
+# print power(3)
+
+# 函数默认参数，在函数定义时就确定的，每次调用函数默认参数都是最初的那个值
+# 要注意基本类型和对象类型
+def a(x, n=[], m=1):
+    n.append(1)
+    m = m + 1
+    print(len(n))
+    print u"m=", m
+
+a(100)
+a(100)
+a(100)
+
+
+
