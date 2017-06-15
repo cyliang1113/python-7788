@@ -16,6 +16,8 @@ def swith(x, y):
 
 
 # print swith(1, 2)
+t = (1, 2)
+swith(*t)  # 相当于switch(1, 2)
 
 
 

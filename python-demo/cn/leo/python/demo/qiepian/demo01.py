@@ -16,4 +16,5 @@ print t[1:]
 s = u"我们abcde"
 print s[0:3]
 
-print range(3)
+print range(3)  # 从0开始，到3，但不包括3
+print range(2, 3)   # 从2开始，到3，但不包括3
