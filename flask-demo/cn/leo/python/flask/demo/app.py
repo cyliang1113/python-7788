@@ -24,9 +24,6 @@ def login():
         username = request.args.get("username")
         password = request.args.get("password")
         
-    print username
-    print password
-    
     if(u"admin" == username and u"admin" == password):
         return "login success"
     return render_template("loginPage.html", message=u"用户名或者密码错误", username=username)
