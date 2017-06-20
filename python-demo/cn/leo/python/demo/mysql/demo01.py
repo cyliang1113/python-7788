@@ -1,6 +1,6 @@
 # coding: utf-8
 
-# 要安装mysql-connector-python
+# 要安装mysql-connector-python, mysql官网有安装教程
 # https://dev.mysql.com/doc/connector-python/en/connector-python-installation.html
 
 import mysql.connector
