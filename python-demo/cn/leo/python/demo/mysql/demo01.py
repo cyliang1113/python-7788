@@ -9,11 +9,11 @@ dbConfig = {
     "user" : "root",
     "password" : "123456",
     "host" : "192.168.17.212",
-    "database" : "x-back"
+    "database" : "python-demo"
     }
 conn = mysql.connector.connect(**dbConfig)
 cursor = conn.cursor()
-cursor.execute("select * from t_sys_menu")
+cursor.execute("select * from t_user_user")
 
 for row in cursor:
     print row
