@@ -15,5 +15,20 @@ class UserUser(Base):
     user_name = Column(String)
     user_password = Column(String)
     
-    def __str__(self):
-        return u"UserUser(user_id=%d, user_name=%s)" % (self.user_id, self.user_name)
+    
+from  sqlalchemy import create_engine
+engine = create_engine('mysql+mysqlconnector://root:123456@192.168.17.212:3306/python-demo?charset=utf8')
+
+from sqlalchemy.orm import sessionmaker
+DBSession = sessionmaker(bind=engine)
+
+session = DBSession()
+user_user_list = session.query(UserUser).all()
+
+for user_user in user_user_list:
+    print user_user.user_id, user_user.user_name
+
+session.close()
+
+
+
