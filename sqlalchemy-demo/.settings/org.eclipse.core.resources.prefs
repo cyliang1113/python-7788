@@ -1,2 +1,4 @@
 eclipse.preferences.version=1
-encoding//cn/leo/pay/sqlalchemy/demo/orm/useruser.py=utf-8
+encoding//cn/leo/sqlalchemy/demo/app.py=utf-8
+encoding//cn/leo/sqlalchemy/demo/database/db.py=utf-8
+encoding//cn/leo/sqlalchemy/demo/orm/models.py=utf-8
