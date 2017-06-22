@@ -2,8 +2,9 @@
 
 from  sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
+import cn.leo.sqlalchemy.demo.config.database_config as database_config
 
-engine = create_engine('mysql+mysqlconnector://root:123456@192.168.17.212:3306/python-demo?charset=utf8', echo=False)
+engine = create_engine(database_config.url, echo=False)
 
 dbsession_maker = sessionmaker(bind=engine)
 

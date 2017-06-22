@@ -14,12 +14,6 @@ for user_user in user_user_list:
 
 session1.close()
 
-# session2 = get_session()
-session2 = session1
-print session2
-user = UserUser(u"爱国者")
-session2.add(user)
-session2.commit()
 
 
 
