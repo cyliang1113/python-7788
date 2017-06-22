@@ -8,6 +8,6 @@ engine = create_engine(database_config.url, echo=False)
 
 dbsession_maker = sessionmaker(bind=engine)
 
-get_session = dbsession_maker
+get_new_session = dbsession_maker
 
 print "db.py"
