@@ -16,7 +16,7 @@ class UserUser(Base):
     
     def __init__(self, name):
         self.user_name = name
-
+        
 
 
 
