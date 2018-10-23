@@ -8,22 +8,21 @@ class Person(object):  # 括号中表示该类的父类，如果没有自定义�
         self.__sex = sex
      
     # 方法就是与实例绑定的函数，和普通函数不同，方法可以直接访问实例的数据；   
-    def getName(self):
+    def get_name(self):
         return self.name
     
-    def getSex(self):
+    def get_sex(self):
         return self.__sex
     
 
 p = Person(u"leo")
-print p
-print p.name
-print p.getName()
+print(p)
+
 
 p.age = 15
-print p.age
+print(p.age)
 
-# print p.__sex    __开头的对象属性不能直接访问, 会报错.
-print p.getSex()
-print dir(p)
+# print(p.__sex)    # __开头的对象属性不能直接访问, 会报错.
+print(p.get_sex())
+print(dir(p))
 
