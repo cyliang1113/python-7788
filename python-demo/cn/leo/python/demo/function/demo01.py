@@ -38,11 +38,50 @@ def a(x, n=[], m=1):
     n.append(1)
     m = m + 1
     print(len(n))
-    print u"m=", m
+    print(u"m=", m)
 
 a(100)
 a(100)
 a(100)
+
+def get_stu(name, age = 20):
+    age = age + 1
+    print(age)
+    return (name, age)
+print(get_stu('leo'))
+print(get_stu('leon'))
+
+def aa(name, clazz = []):
+    clazz.append('a')
+    print(clazz)
+    return (name, clazz)
+print(aa('leo'))
+print(aa('leon'))
+
+def aaa(*arg):
+    print(type(arg))
+    print(arg)
+
+aaa(11, 'leo')
+ij = int(1)
+def bb(name, **arg):
+    print(name)
+    print(arg)
+
+bb('leo', sex = 'male')
+bb('leo', sex = 'female')
+
+print(type(1))
+print(type(int(1)))
+
+def ccc(num):
+    num.append('11');
+    return num
+xx = ['00']
+print(xx)
+print(ccc(xx))
+print(xx)
+
 
 
 

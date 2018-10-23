@@ -16,7 +16,7 @@ cursor = conn.cursor()
 cursor.execute("select * from t_user_user")
 
 for row in cursor:
-    print row
+    print(row)
     
 cursor.close()
 conn.close()
