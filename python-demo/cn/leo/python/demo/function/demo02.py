@@ -2,13 +2,13 @@
 
 # 函数可变参数，*args
 def add(*args):  # 这里的星号表示可变参数
-    print type(args)  # <type 'tuple'>
-    print u"args length: ", len(args)
+    print(type(args))  # <type 'tuple'>
+    print(u"args length: ", len(args))
     s = 0
     for i in args:
         s += i
-    print s
-    print u"========================================"
+    print(s)
+    print(u"========================================")
     
     
     
@@ -24,8 +24,8 @@ add(*l)
 # 关键字参数，**kw
 
 def person(**kw):
-    print kw
-    print u"========================================"
+    print(kw)
+    print(u"========================================")
     
 person()
 person(name=u"leo", age=26)
@@ -35,9 +35,9 @@ person(**m)  # 这里的双星号**表示dict转成关键字参数  => person(na
 
 
 def func(*args, **kw):
-    print args
-    print kw
-    print u"========================================"
+    print(args)
+    print(kw)
+    print(u"========================================")
     
 func(1, 2, name=u"leo")    
 
