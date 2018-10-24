@@ -11,19 +11,20 @@ class Person(object):  # 括号中表示该类的父类，如果没有自定义�
     def getName(self):
         return self.name
     
-    def getSex(self):
+    def get_sex(self):
         return self.__sex
     
 
 p = Person(u"leo")
-print p
-print p.name
-print p.getName()
+print(p)
+print(p.name)
+print(p.get_sex())
+
 
 p.age = 15
-print p.age
+print(p.age)
 
 # print p.__sex    __开头的对象属性不能直接访问, 会报错.
-print p.getSex()
-print dir(p)
+print(p.get_sex())
+print(dir(p))
 
