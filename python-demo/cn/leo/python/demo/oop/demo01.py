@@ -18,11 +18,15 @@ class Person(object):  # 括号中表示该类的父类，如果没有自定义�
 p = Person(u"leo")
 print(p)
 
+print(p)
+print(p.name)
+print(p.get_sex())
+
 
 p.age = 15
 print(p.age)
 
-# print(p.__sex)    # __开头的对象属性不能直接访问, 会报错.
+# print p.__sex    __开头的对象属性不能直接访问, 会报错.
 print(p.get_sex())
 print(dir(p))
 
