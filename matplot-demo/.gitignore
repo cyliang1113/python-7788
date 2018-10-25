@@ -1,0 +1,6 @@
+/.settings/
+/*.iml
+/.project
+/.pydevproject
+/.idea
+/__pycache__
