@@ -76,3 +76,7 @@ for k in dic.keys():
 stu = {'name' : 'Tom', 'class' : ['cn', 'eg', 'math']}
 for k, v in stu.items():
     print(v)
+
+
+print(4 // 3)  # 整除
+
