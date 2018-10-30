@@ -82,6 +82,13 @@ print(xx)
 print(ccc(xx))
 print(xx)
 
+def ddd(name, age):
+    print('name:' + name)
+    print('age:' + str(age))
+
+xxx = {'name': 'Tom', 'age': 25}
+ddd(name='Jack', age=26)
+ddd(**xxx)  # **xxx等效于name='Jack', age=26
 
 
 

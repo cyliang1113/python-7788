@@ -30,3 +30,15 @@ print(p.age)
 print(p.get_sex())
 print(dir(p))
 
+
+class BadPerson(Person):
+
+    def __init__(self, name, sex, bad):
+        super(BadPerson, self).__init__(name, sex)
+        self.bad = bad
+
+bad_p = BadPerson('Tom', 'male', False)
+print(bad_p.get_name())
+print(bad_p.get_sex())
+print(bad_p.bad)
+
