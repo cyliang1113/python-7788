@@ -29,7 +29,7 @@ def pageType(file, offset):
     key = (data.hex());
 
     map = {
-        "45bf": "B+树叶子节点页",
+        "45bf": "B+树节点页",
         "0002": "undo log页",
         "0003": "索引节点页",
         "0004": "insert buffer空闲列表页",
@@ -44,7 +44,8 @@ def pageType(file, offset):
     print("页类型: " + key + ", " + str(map.get(key)));
 
 
-file_name = 'C:/Users/leon/Desktop/test1/user_user.ibd'
+# file_name = 'C:/Users/leon/Desktop/test1/user_user.ibd'
+file_name = 'C:/Users/youliang.chen/Desktop/test1/user.ibd'
 page_size = 16;  # 页大小16K
 size = int(path.getsize(file_name) / 1024)
 page_count = int(size / page_size)
