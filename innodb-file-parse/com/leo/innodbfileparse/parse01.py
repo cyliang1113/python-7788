@@ -5,7 +5,7 @@ def pageNo(file, offset):
     s = offset + 4;
     file.seek(s)
     data = file.read(4)
-    print("页编号: " + data.hex())
+    print("页编号: " + data.hex() + ", " + hex(offset)[2:])
 
 
 def beforePage(file, offset):
@@ -45,7 +45,7 @@ def pageType(file, offset):
 
 
 # file_name = 'C:/Users/leon/Desktop/test1/user_user.ibd'
-file_name = 'C:/Users/youliang.chen/Desktop/test1/user.ibd'
+file_name = 'C:/Users/youliang.chen/Desktop/test3/t1.ibd'
 page_size = 16;  # 页大小16K
 size = int(path.getsize(file_name) / 1024)
 page_count = int(size / page_size)
