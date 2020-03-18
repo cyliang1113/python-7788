@@ -41,11 +41,29 @@ def pageType(file, offset):
         "0009": "扩展描述页",
         "000a": "BLOB页",
     }
-    print("页类型: " + key + ", " + str(map.get(key)));
+    print("页类型: " + key + ", " + str(map.get(key)))
+
+def pageRecordQuantity(file, offset):
+    s = offset + 54;
+    file.seek(s)
+    data = file.read(2)
+    print("页中记录数: " + str(int.from_bytes(data, byteorder='big')))
+
+def pageLevel(file, offset):
+    s = offset + 64;
+    file.seek(s)
+    data = file.read(2)
+    print("页所在索引树中的层数: " + str(int.from_bytes(data, byteorder='big')))
+
+def indexId(file, offset):
+    s = offset + 66;
+    file.seek(s)
+    data = file.read(8)
+    print("页所在索引树的id: " + data.hex())
 
 
 # file_name = 'C:/Users/leon/Desktop/test1/user_user.ibd'
-file_name = 'C:/Users/youliang.chen/Desktop/test3/t1.ibd'
+file_name = 'C:/Users/leon/Desktop/test_db2/user_user.ibd'
 page_size = 16;  # 页大小16K
 size = int(path.getsize(file_name) / 1024)
 page_count = int(size / page_size)
@@ -61,3 +79,6 @@ with open(file_name, "rb") as file:
         beforePage(file, offset)
         afterPage(file, offset)
         pageType(file, offset)
+        pageRecordQuantity(file, offset)
+        pageLevel(file, offset)
+        indexId(file, offset)
