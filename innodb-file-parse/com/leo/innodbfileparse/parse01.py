@@ -5,7 +5,7 @@ def pageNo(file, offset):
     s = offset + 4;
     file.seek(s)
     data = file.read(4)
-    print("页编号: " + data.hex() + ", " + hex(offset)[2:])
+    print("页编号: " + data.hex() + ", 偏移: " + hex(offset))
 
 
 def beforePage(file, offset):
@@ -43,6 +43,12 @@ def pageType(file, offset):
     }
     print("页类型: " + key + ", " + str(map.get(key)))
 
+def pageLastRecord(file, offset):
+    s = offset + 48;
+    file.seek(s)
+    data = file.read(2)
+    print("页中最后插入记录指针: " + data.hex())
+
 def pageRecordQuantity(file, offset):
     s = offset + 54;
     file.seek(s)
@@ -61,9 +67,15 @@ def indexId(file, offset):
     data = file.read(8)
     print("页所在索引树的id: " + data.hex())
 
+def infimumNextRecord(file, offset):
+    s = offset + 97
+    file.seek(s)
+    data = file.read(2)
+    print("页中infimum next记录偏移: " + hex(0X63 + int(data.hex(), base=16)))
 
-# file_name = 'C:/Users/leon/Desktop/test1/user_user.ibd'
-file_name = 'C:/Users/leon/Desktop/test_db2/user_user.ibd'
+
+file_name = 'C:\\Users\\youliang.chen\\Desktop\\test_db3\\t1.ibd'
+# file_name = 'C:/Users/leon/Desktop/test_db2/user_user.ibd'
 page_size = 16;  # 页大小16K
 size = int(path.getsize(file_name) / 1024)
 page_count = int(size / page_size)
@@ -79,6 +91,8 @@ with open(file_name, "rb") as file:
         beforePage(file, offset)
         afterPage(file, offset)
         pageType(file, offset)
+        pageLastRecord(file, offset)
         pageRecordQuantity(file, offset)
         pageLevel(file, offset)
         indexId(file, offset)
+        infimumNextRecord(file, offset)
