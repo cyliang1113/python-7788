@@ -10,4 +10,4 @@ dbsession_maker = sessionmaker(bind=engine)
 
 get_new_session = dbsession_maker
 
-print "db.py"
+print("db.py")
