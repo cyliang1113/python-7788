@@ -1,3 +1,5 @@
+# coding: utf-8
+# 解析mysql ibd文件
 import os.path as path
 
 
